@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WarnaKursiCoklat">
+
+    <!-- TODO: Update blank fragment layout -->
+    <View
+        android:id="@+id/view_kursi"
+        android:layout_width="300dp"
+        android:layout_height="380dp"
+        android:layout_marginLeft="119dp"
+        android:layout_marginRight="0dp"
+        android:paddingRight="0dp"
+        android:paddingLeft="0dp"
+        android:background="@drawable/bg_coklat"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.2"/>
+
+    <RelativeLayout
+        android:id="@+id/RL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="0dp"
+        android:paddingRight="0dp"
+        android:paddingLeft="0dp"
+        android:gravity="start"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageView
+            android:id="@+id/kursi1"
+            android:layout_width="200dp"
+            android:layout_height="250dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="155dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/kursi3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_ijo"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/bg_bulet"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="125dp"/>
+
+        <ImageButton
+            android:id="@+id/btn_coklat"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/bg_bulet2"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="52dp"
+            android:layout_marginTop="153dp"/>
+
+        <ImageButton
+            android:id="@+id/btn_ungu"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/bg_bulet3"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="58dp"
+            android:layout_marginTop="200dp"/>
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_putih"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="310dp" />
+
+        <ImageView
+            android:id="@+id/love"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/love2"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="133dp"
+            android:layout_marginTop="320dp" />
+
+        <ImageView
+            android:id="@+id/panah"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/panah2" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

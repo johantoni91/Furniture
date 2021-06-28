@@ -8,4 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#bababa</color>
+    <color name="matcha">#C9D1C2</color>
+    <color name="coklat_muda">#DACFCA</color>
+    <color name="ijo">#86937D</color>
+    <color name="coklat">#90807A</color>
+    <color name="unggu">#940986</color>
 </resources>
