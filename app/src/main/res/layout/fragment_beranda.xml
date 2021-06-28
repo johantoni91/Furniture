@@ -81,20 +81,22 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewXML"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
                     android:orientation="horizontal"
                     android:layout_marginBottom="10dp"/>
             </HorizontalScrollView>
 
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tabLayout"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="#00FFFFFF"
-                app:tabGravity="start"
-                app:tabMode="auto">
+                android:layout_marginTop="30dp"
+                android:background="#00FFFFFF">
 
                 <com.google.android.material.tabs.TabItem
                     android:id="@+id/semua"
@@ -102,7 +104,7 @@
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
                     android:scrollbarThumbHorizontal="@string/hide_bottom_view_on_scroll_behavior"
-                    android:text="All"/>
+                    android:text="All" />
 
                 <com.google.android.material.tabs.TabItem
                     android:id="@+id/kursi"
@@ -126,10 +128,10 @@
                     android:id="@+id/meja"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tables" />
+                    android:text="Tables"/>
 
             </com.google.android.material.tabs.TabLayout>
-
+            </HorizontalScrollView>
         </FrameLayout>
     </LinearLayout>
 </FrameLayout>
