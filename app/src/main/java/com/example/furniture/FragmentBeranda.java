@@ -27,11 +27,9 @@ public class FragmentBeranda extends Fragment {
         View view = inflater.inflate(R.layout.fragment_beranda, container, false);
 
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerViewXML);
-
         ListAdapter listAdapter = new ListAdapter();
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
         recyclerView.setAdapter(listAdapter);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(layoutManager);
 
         return view;
 
