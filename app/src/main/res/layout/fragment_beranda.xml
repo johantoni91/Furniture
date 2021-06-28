@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FragmentBeranda">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/RL"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_margin="20dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="start"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/nav"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_baseline_bar_chart_24" />
+
+            <ImageButton
+                android:id="@+id/search"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/ic_baseline_search_24" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif"
+            android:text="Find The"
+            android:textColor="@color/black"
+            android:textFontWeight="200"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif"
+            android:text="Best Furniture"
+            android:textColor="@color/black"
+            android:textFontWeight="500"
+            android:textSize="20sp" />
+
+        <FrameLayout
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/round"
+            android:paddingTop="20dp">
+
+            <HorizontalScrollView
+                style="@android:style/Widget.DeviceDefault.HorizontalScrollView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbarStyle="outsideOverlay"
+                android:visibility="invisible"
+                tools:visibility="visible">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewXML"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"/>
+            </HorizontalScrollView>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#00FFFFFF"
+                app:tabGravity="start"
+                app:tabMode="auto">
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/semua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scrollbarThumbHorizontal="@string/hide_bottom_view_on_scroll_behavior"
+                    android:text="All"/>
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/kursi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chairs" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/sofa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sofas" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/kasur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Beds" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/meja"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tables" />
+
+            </com.google.android.material.tabs.TabLayout>
+
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>
