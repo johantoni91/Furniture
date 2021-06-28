@@ -10,13 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.ArrayList;
-
 public class FragmentBeranda extends Fragment {
-    private RecyclerView recyclerView;
-    private ListAdapter listAdapter;
-    private ArrayList<disc> discountArrayList;
-
     public FragmentBeranda(){
 
     }
