@@ -2,4 +2,7 @@
     <string name="app_name">Furniture</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="deskripsi">
+        Kursi ini adalah kursi kualitas terbaik, yang di import langsung dari luar
+    </string>
 </resources>
