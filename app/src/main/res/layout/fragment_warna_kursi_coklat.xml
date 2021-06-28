@@ -45,7 +45,7 @@
             android:layout_marginRight="0dp"
             android:layout_marginLeft="155dp"
             android:layout_marginTop="50dp"
-            android:src="@drawable/kursi3"
+            android:src="@drawable/kursi_coklat"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
