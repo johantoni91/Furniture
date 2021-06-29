@@ -59,43 +59,38 @@
             android:layout_marginLeft="20dp"
             android:fontFamily="sans-serif"
             android:text="Best Furniture"
+            android:textStyle="bold"
             android:textColor="@color/black"
-            android:textFontWeight="500"
-            android:textSize="20sp" />
+            android:textFontWeight="700"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp"/>
 
-        <FrameLayout
+        <LinearLayout
             android:layout_width="400dp"
-            android:layout_height="wrap_content"
+            android:layout_height="579dp"
             android:layout_marginLeft="20dp"
-            android:layout_weight="1"
+            android:layout_weight="0"
             android:background="@drawable/round"
+            android:orientation="vertical"
             android:paddingTop="20dp">
 
-            <HorizontalScrollView
-                style="@android:style/Widget.DeviceDefault.HorizontalScrollView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scrollbarStyle="outsideOverlay"
-                android:visibility="invisible"
-                tools:visibility="visible">
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerViewXML"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="10dp"/>
-            </HorizontalScrollView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewXML"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal" />
 
             <HorizontalScrollView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:background="@drawable/bg_transparan">
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayoutXML"
+                android:layout_width="match_parent"
+                app:tabGravity="center"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:background="#00FFFFFF">
 
                 <com.google.android.material.tabs.TabItem
@@ -103,7 +98,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
-                    android:scrollbarThumbHorizontal="@string/hide_bottom_view_on_scroll_behavior"
                     android:text="All" />
 
                 <com.google.android.material.tabs.TabItem
@@ -128,10 +122,38 @@
                     android:id="@+id/meja"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tables"/>
+                    android:text="Tables" />
 
             </com.google.android.material.tabs.TabLayout>
             </HorizontalScrollView>
-        </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/bg_transparan">
+
+                <FrameLayout
+                    android:id="@+id/tampil"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/bg_transparan">
+                </FrameLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_transparan"
+                    android:gravity="right"
+                    android:layout_marginLeft="250dp"
+                    android:text="See All ->"
+                    android:textColor="@color/black"
+                    android:layout_marginRight="30dp"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
 </FrameLayout>

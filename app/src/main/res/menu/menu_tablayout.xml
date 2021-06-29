@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="All"
+        android:id="@+id/tabLayoutAllitems"/>
+    <item
+        android:title="Chairs"
+        android:id="@+id/tabLayoutChairsitems"/>
+    <item
+        android:title="Sofas"
+        android:id="@+id/tabLayoutSofasitems"/>
+    <item
+        android:title="Beds"
+        android:id="@+id/tabLayoutBedsitems"/>
+    <item
+        android:title="Tables"
+        android:id="@+id/tabLayoutTablesitems"/>
+</menu>

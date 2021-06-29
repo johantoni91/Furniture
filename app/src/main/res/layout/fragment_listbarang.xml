@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="215dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@drawable/buletan_putih">
+
+        <ImageView
+            android:id="@+id/imgViewTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@drawable/kursi4"/>
+
+        <TextView
+            android:id="@+id/tvNamaBarangTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Oslo Side Chair"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:textFontWeight="400"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/tvHargaBarangTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$250"
+            android:textFontWeight="800"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+</LinearLayout>

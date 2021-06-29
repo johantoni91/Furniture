@@ -7,13 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.view.menu.MenuView;
 import androidx.recyclerview.widget.RecyclerView;
-
-import org.w3c.dom.Text;
-
-import java.util.ArrayList;
-import java.util.zip.Inflater;
 
 public class ListAdapter extends RecyclerView.Adapter{
 
@@ -31,7 +25,7 @@ public class ListAdapter extends RecyclerView.Adapter{
 
     @Override
     public int getItemCount() {
-        return disc.namaBarang.length;
+        return listItems.namaBarang.length;
     }
 
     private class ListViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
@@ -49,9 +43,9 @@ public class ListAdapter extends RecyclerView.Adapter{
         }
 
         public void bindView(int position){
-            mItemText.setText(disc.namaBarang[position]);
-            mDiscounts.setText(disc.jmlDiskon[position]);
-            mObjects.setImageResource(disc.image[position]);
+            mItemText.setText(listItems.namaBarang[position]);
+            mDiscounts.setText(listItems.jmlDiskon[position]);
+            mObjects.setImageResource(listItems.image[position]);
         }
 
         public void onClick(View view){
