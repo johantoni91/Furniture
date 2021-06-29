@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
 
-        IV = (ImageView) findViewById(R.id.imgViewTabLayout);
         BottomNavigationView bottom = findViewById(R.id.menu);
 
         bottom.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

@@ -4,26 +4,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/CVlistBarang"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
     <LinearLayout
+        android:id="@+id/LL0"
         android:layout_width="150dp"
         android:layout_height="215dp"
         android:orientation="vertical"
+        android:layout_marginRight="25dp"
         android:padding="10dp"
+        android:outlineSpotShadowColor="@color/black"
+        android:outlineAmbientShadowColor="@color/black"
         android:background="@drawable/buletan_putih">
 
         <ImageView
-            android:id="@+id/imgViewTabLayout"
+            android:id="@+id/imgViewList0"
             android:layout_width="match_parent"
             android:layout_height="140dp"
             android:src="@drawable/kursi4"/>
 
         <TextView
-            android:id="@+id/tvNamaBarangTabLayout"
+            android:id="@+id/tvNamaBarangList0"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Oslo Side Chair"
@@ -33,7 +32,42 @@
             android:layout_marginBottom="5dp"/>
 
         <TextView
-            android:id="@+id/tvHargaBarangTabLayout"
+            android:id="@+id/tvHargaBarangList0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$250"
+            android:textFontWeight="800"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LL1"
+        android:layout_width="150dp"
+        android:layout_height="215dp"
+        android:orientation="vertical"
+        android:layout_marginRight="25dp"
+        android:padding="10dp"
+        android:outlineSpotShadowColor="@color/black"
+        android:outlineAmbientShadowColor="@color/black"
+        android:background="@drawable/buletan_putih">
+
+        <ImageView
+            android:id="@+id/imgViewList1"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:src="@drawable/kursi4"/>
+
+        <TextView
+            android:id="@+id/tvNamaBarangList1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Oslo Side Chair"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:textFontWeight="400"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/tvHargaBarangList1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="$250"
@@ -41,5 +75,76 @@
             android:textStyle="bold"/>
 
     </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:id="@+id/LL2"
+        android:layout_width="150dp"
+        android:layout_height="215dp"
+        android:orientation="vertical"
+        android:layout_marginRight="25dp"
+        android:padding="10dp"
+        android:outlineSpotShadowColor="@color/black"
+        android:outlineAmbientShadowColor="@color/black"
+        android:background="@drawable/buletan_putih">
+
+        <ImageView
+            android:id="@+id/imgViewList2"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:src="@drawable/kursi4"/>
+
+        <TextView
+            android:id="@+id/tvNamaBarangList2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Oslo Side Chair"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:textFontWeight="400"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/tvHargaBarangList2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$250"
+            android:textFontWeight="800"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LL3"
+        android:layout_width="150dp"
+        android:layout_height="215dp"
+        android:orientation="vertical"
+        android:layout_marginRight="25dp"
+        android:padding="10dp"
+        android:outlineSpotShadowColor="@color/black"
+        android:outlineAmbientShadowColor="@color/black"
+        android:background="@drawable/buletan_putih">
+
+        <ImageView
+            android:id="@+id/imgViewList3"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:src="@drawable/kursi4"/>
+
+        <TextView
+            android:id="@+id/tvNamaBarangList3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Oslo Side Chair"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:textFontWeight="400"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/tvHargaBarangList3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$250"
+            android:textFontWeight="800"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
 </LinearLayout>
