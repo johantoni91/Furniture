@@ -4,17 +4,16 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.tabs.TabLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-
-import java.util.ArrayList;
+import android.view.View;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-    TabLayout tabLayout;
+    public ImageView IV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,31 +24,8 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
 
+        IV = (ImageView) findViewById(R.id.imgViewTabLayout);
         BottomNavigationView bottom = findViewById(R.id.menu);
-
-        tabLayout = (TabLayout) findViewById(R.id.tabLayoutXML);
-        tabLayout.addTab(tabLayout.newTab().setText("All"));
-        tabLayout.addTab(tabLayout.newTab().setText("Chairs"));
-        tabLayout.addTab(tabLayout.newTab().setText("Sofas"));
-        tabLayout.addTab(tabLayout.newTab().setText("Beds"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tables"));
-
-        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
 
         bottom.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -59,6 +35,13 @@ public class MainActivity extends AppCompatActivity {
                         ft.add(R.id.fragment, Fb);
                         ft.replace(R.id.fragment, Fb);
                         ft.commit();
+
+                        IV.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                startActivity(new Intent(MainActivity.this, ChoseItem.class));
+                            }
+                        });
                         return false;
 
                     case R.id.favourite:
