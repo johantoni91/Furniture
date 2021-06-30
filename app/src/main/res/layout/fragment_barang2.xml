@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentBarang1">
+
+    <LinearLayout
+        android:id="@+id/LLv2"
+        android:layout_width="150dp"
+        android:layout_height="215dp"
+        android:orientation="vertical"
+        android:layout_marginRight="25dp"
+        android:padding="10dp"
+        android:outlineSpotShadowColor="@color/black"
+        android:outlineAmbientShadowColor="@color/black"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/imgViewListv2"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/sofa3"/>
+
+        <TextView
+            android:id="@+id/tvNamaBarangListv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fritz Hansen Sofa"
+            android:layout_marginTop="5dp"
+            android:textSize="13sp"
+            android:textFontWeight="400"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/tvHargaBarangListv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$390"
+            android:textFontWeight="800"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LLv3"
+        android:layout_width="150dp"
+        android:layout_height="215dp"
+        android:orientation="vertical"
+        android:layout_marginRight="25dp"
+        android:padding="10dp"
+        android:outlineSpotShadowColor="@color/black"
+        android:outlineAmbientShadowColor="@color/black"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/imgViewListv3"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/sofa2"/>
+
+        <TextView
+            android:id="@+id/tvNamaBarangListv3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scandinavian Sofa"
+            android:layout_marginTop="5dp"
+            android:textSize="13sp"
+            android:textFontWeight="400"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/tvHargaBarangListv3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$280"
+            android:textFontWeight="800"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</LinearLayout>

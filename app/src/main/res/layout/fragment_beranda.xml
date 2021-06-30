@@ -66,9 +66,10 @@
             android:layout_marginBottom="10dp"/>
 
         <LinearLayout
-            android:layout_width="400dp"
+            android:layout_width="match_parent"
             android:layout_height="579dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="-15dp"
+            android:layout_marginStart="20dp"
             android:layout_weight="0"
             android:background="@drawable/round"
             android:orientation="vertical"
@@ -76,89 +77,68 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_marginEnd="20dp"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerViewXML"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViewXML"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="20dp"
+                        android:orientation="horizontal" />
             </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.bottomnavigation.BottomNavigationView
+                        android:id="@+id/pilihan"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#dddddd"
+                        android:isScrollContainer="true"
+                        android:onClick="onClick"
+                        android:overScrollMode="always"
+                        android:textAlignment="center"
+                        app:labelVisibilityMode="labeled"
+                        app:menu="@menu/menu_apaajadah" />
+                </LinearLayout>
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_transparan">
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabLayoutXML"
-                android:layout_width="match_parent"
-                app:tabGravity="center"
-                android:layout_gravity="center"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="#00FFFFFF">
-
-                <com.google.android.material.tabs.TabItem
-                    android:id="@+id/semua"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:adjustViewBounds="true"
-                    android:text="All" />
-
-                <com.google.android.material.tabs.TabItem
-                    android:id="@+id/kursi"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Chairs" />
-
-                <com.google.android.material.tabs.TabItem
-                    android:id="@+id/sofa"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sofas" />
-
-                <com.google.android.material.tabs.TabItem
-                    android:id="@+id/kasur"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Beds" />
-
-                <com.google.android.material.tabs.TabItem
-                    android:id="@+id/meja"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tables" />
-
-            </com.google.android.material.tabs.TabLayout>
+                android:layout_height="wrap_content">
+                <FrameLayout
+                    android:id="@+id/tampilPilihan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
             </HorizontalScrollView>
 
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:background="@drawable/bg_transparan">
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rcvTabLayout"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:orientation="horizontal"/>
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="45dp"
+                    android:gravity="end"
+                    android:orientation="horizontal">
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:background="@drawable/bg_transparan"
-                    android:gravity="right"
-                    android:layout_marginLeft="250dp"
-                    android:text="See All ->"
-                    android:textColor="@color/black"
-                    android:layout_marginRight="30dp"
-                    android:textSize="12sp"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_gravity="end"
+                        android:background="@drawable/bg_transparan"
+                        android:text="See All"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
 
-            </LinearLayout>
-
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="end"
+                        android:src="@drawable/ic_right_arrow1" />
+                </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </FrameLayout>
