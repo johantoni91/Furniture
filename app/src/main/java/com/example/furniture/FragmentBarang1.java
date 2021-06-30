@@ -26,16 +26,21 @@ public class FragmentBarang1 extends Fragment implements View.OnClickListener{
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_barang1, container, false);
 
-        Intent intent = new Intent(getContext(), ChoseItem.class);
-        IB = v.findViewById(R.id.bangkuIjo);
+        //Intent intent = new Intent(getContext(), ChoseItem.class);
+        IB = (ImageButton)v.findViewById(R.id.bangkuIjo);
         IB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(intent);
+                updateDetail();
             }
         });
 
         return v;
+    }
+
+    public void updateDetail() {
+        Intent intent = new Intent(getActivity(), ChoseItem.class);
+        startActivity(intent);
     }
 
     public void onClick(View v){
