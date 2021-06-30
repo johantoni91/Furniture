@@ -11,20 +11,34 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
-public class FragmentBarang1 extends Fragment {
-
+public class FragmentBarang1 extends Fragment implements View.OnClickListener{
+    public ImageButton IB;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+    }
+
+    public FragmentBarang1() {
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_barang1, container, false);
-        Intent intent = new Intent(getActivity(), ChoseItem.class);
-        ImageButton IB = v.findViewById(R.id.imgViewListv2);
-        IB.setOnClickListener(v1 -> startActivity(intent));
+
+        Intent intent = new Intent(getContext(), ChoseItem.class);
+        IB = v.findViewById(R.id.bangkuIjo);
+        IB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(intent);
+            }
+        });
+
         return v;
+    }
+
+    public void onClick(View v){
+
     }
 }
