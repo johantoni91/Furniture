@@ -70,10 +70,10 @@ public class FragmentBeranda extends Fragment {
                     case R.id.all: FT.replace(R.id.tampilPilihan, FB).addToBackStack(null).commit();
                     break;
 
-                    case R.id.Chairs: FT.add(R.id.tampilPilihan, FB1).addToBackStack(null).commit();
+                    case R.id.Chairs: FT.replace(R.id.tampilPilihan, FB1).addToBackStack(null).commit();
                     break;
 
-                    case R.id.Sofas:  FT.add(R.id.tampilPilihan, FB2).addToBackStack(null).commit();
+                    case R.id.Sofas:  FT.replace(R.id.tampilPilihan, FB2).addToBackStack(null).commit();
                     break;
                 }
                 return false;
