@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewManager;
 import android.widget.ImageButton;
 
 import androidx.fragment.app.Fragment;
@@ -17,20 +18,11 @@ public class FragmentBarang extends Fragment {
     public FragmentBarang() {
     }
 
-    public FragmentBarang(int contentLayoutId) {
-        super(contentLayoutId);
-    }
-
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.list_barang, container, false);
+        Intent i = new Intent(getActivity(), ChoseItem.class);
         ImageButton IB = v.findViewById(R.id.imgViewList0);
-        IB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getContext(), ChoseItem.class);
-                startActivity(i);
-            }
-        });
+        IB.setOnClickListener(v1 -> startActivity(i));
         return v;
     }
 }
