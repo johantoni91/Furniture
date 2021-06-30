@@ -19,17 +19,17 @@
 
         <ImageView
             android:id="@+id/imgViewListv2"
-            android:layout_width="match_parent"
-            android:layout_height="140dp"
-            android:src="@drawable/kursi4"/>
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/sofa3"/>
 
         <TextView
             android:id="@+id/tvNamaBarangListv2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Oslo Side Chair"
+            android:text="Fritz Hansen Sofa"
             android:layout_marginTop="5dp"
-            android:textSize="16sp"
+            android:textSize="13sp"
             android:textFontWeight="400"
             android:layout_marginBottom="5dp"/>
 
@@ -37,7 +37,7 @@
             android:id="@+id/tvHargaBarangListv2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="$250"
+            android:text="$390"
             android:textFontWeight="800"
             android:textStyle="bold"/>
 
@@ -55,17 +55,17 @@
 
         <ImageView
             android:id="@+id/imgViewListv3"
-            android:layout_width="match_parent"
-            android:layout_height="140dp"
-            android:src="@drawable/kursi2"/>
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/sofa2"/>
 
         <TextView
             android:id="@+id/tvNamaBarangListv3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Womb Chair"
+            android:text="Scandinavian Sofa"
             android:layout_marginTop="5dp"
-            android:textSize="16sp"
+            android:textSize="13sp"
             android:textFontWeight="400"
             android:layout_marginBottom="5dp"/>
 
@@ -73,7 +73,7 @@
             android:id="@+id/tvHargaBarangListv3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="$310"
+            android:text="$280"
             android:textFontWeight="800"
             android:textStyle="bold"/>
 

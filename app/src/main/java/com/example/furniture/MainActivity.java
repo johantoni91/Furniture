@@ -2,6 +2,7 @@ package com.example.furniture;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -20,39 +21,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FragmentBeranda Fb = new FragmentBeranda();
-        FragmentManager fm = getSupportFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-
+        loadFragment(new FragmentBeranda());
         BottomNavigationView bottom = findViewById(R.id.menu);
-
         bottom.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Fragment fragment = null;
                 switch (item.getItemId()){
                     case R.id.home:
-                        ft.add(R.id.fragment, Fb);
-                        ft.replace(R.id.fragment, Fb);
-                        ft.commit();
-
-                        IV.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                startActivity(new Intent(MainActivity.this, ChoseItem.class));
-                            }
-                        });
-                        return false;
-
-                    case R.id.favourite:
-                        return false;
-
-                    case R.id.belanja:
-                        return false;
-
-                    case R.id.profile:
-                        return false;
-                }return false;
+                        fragment = new FragmentBeranda();
+                        break;
+                }return loadFragment(fragment);
             }
         });
+    }
+
+    public boolean loadFragment(Fragment fragment){
+        if(fragment != null){
+            getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, fragment).commit();
+            return true;
+        } return false;
     }
 }

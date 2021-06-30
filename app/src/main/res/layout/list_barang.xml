@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -13,13 +12,13 @@
         android:padding="10dp"
         android:outlineSpotShadowColor="@color/black"
         android:outlineAmbientShadowColor="@color/black"
-        android:background="@drawable/buletan_putih">
+        android:background="#fff">
 
-        <ImageView
+        <ImageButton
             android:id="@+id/imgViewList0"
             android:layout_width="match_parent"
             android:layout_height="140dp"
-            android:src="@drawable/kursi4"/>
+            android:background="@drawable/kursi4"/>
 
         <TextView
             android:id="@+id/tvNamaBarangList0"
@@ -39,6 +38,7 @@
             android:textFontWeight="800"
             android:textStyle="bold"/>
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/LL1"
         android:layout_width="150dp"
@@ -48,19 +48,19 @@
         android:padding="10dp"
         android:outlineSpotShadowColor="@color/black"
         android:outlineAmbientShadowColor="@color/black"
-        android:background="@drawable/buletan_putih">
+        android:background="#fff">
 
         <ImageView
             android:id="@+id/imgViewList1"
             android:layout_width="match_parent"
             android:layout_height="140dp"
-            android:src="@drawable/kursi4"/>
+            android:src="@drawable/kursi2"/>
 
         <TextView
             android:id="@+id/tvNamaBarangList1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Oslo Side Chair"
+            android:text="Womb Chair"
             android:layout_marginTop="5dp"
             android:textSize="16sp"
             android:textFontWeight="400"
@@ -70,11 +70,11 @@
             android:id="@+id/tvHargaBarangList1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="$250"
+            android:text="$310"
             android:textFontWeight="800"
             android:textStyle="bold"/>
-
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/LL2"
         android:layout_width="150dp"
@@ -84,19 +84,19 @@
         android:padding="10dp"
         android:outlineSpotShadowColor="@color/black"
         android:outlineAmbientShadowColor="@color/black"
-        android:background="@drawable/buletan_putih">
+        android:background="#fff">
 
         <ImageView
             android:id="@+id/imgViewList2"
             android:layout_width="match_parent"
             android:layout_height="140dp"
-            android:src="@drawable/kursi4"/>
+            android:src="@drawable/sofa3"/>
 
         <TextView
             android:id="@+id/tvNamaBarangList2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Oslo Side Chair"
+            android:text="Fritz Hansen Sofa"
             android:layout_marginTop="5dp"
             android:textSize="16sp"
             android:textFontWeight="400"
@@ -106,11 +106,11 @@
             android:id="@+id/tvHargaBarangList2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="$250"
+            android:text="$390"
             android:textFontWeight="800"
             android:textStyle="bold"/>
-
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/LL3"
         android:layout_width="150dp"
@@ -120,19 +120,19 @@
         android:padding="10dp"
         android:outlineSpotShadowColor="@color/black"
         android:outlineAmbientShadowColor="@color/black"
-        android:background="@drawable/buletan_putih">
+        android:background="#fff">
 
         <ImageView
             android:id="@+id/imgViewList3"
             android:layout_width="match_parent"
             android:layout_height="140dp"
-            android:src="@drawable/kursi4"/>
+            android:src="@drawable/sofa2"/>
 
         <TextView
             android:id="@+id/tvNamaBarangList3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Oslo Side Chair"
+            android:text="Scandinavian Sofa"
             android:layout_marginTop="5dp"
             android:textSize="16sp"
             android:textFontWeight="400"
@@ -142,9 +142,8 @@
             android:id="@+id/tvHargaBarangList3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="$250"
+            android:text="$280"
             android:textFontWeight="800"
             android:textStyle="bold"/>
-
     </LinearLayout>
 </LinearLayout>
