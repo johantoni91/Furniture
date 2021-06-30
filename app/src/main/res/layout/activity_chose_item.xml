@@ -9,8 +9,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/frame_container"
-        tools:context=".MainActivity">
+        android:id="@+id/frame_container">
     </FrameLayout>
 
 
@@ -30,7 +29,6 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints">
-
 
 
         <TextView

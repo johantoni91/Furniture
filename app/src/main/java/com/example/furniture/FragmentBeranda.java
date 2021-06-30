@@ -1,9 +1,7 @@
 package com.example.furniture;
 
-import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -15,19 +13,13 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import org.jetbrains.annotations.NotNull;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class FragmentBeranda extends Fragment {
+public class FragmentBeranda extends Fragment implements View.OnClickListener{
     private RecyclerView recyclerView;
 
     public FragmentBeranda(){
@@ -40,45 +32,33 @@ public class FragmentBeranda extends Fragment {
         View view = inflater.inflate(R.layout.fragment_beranda, container, false);
         recyclerView = view.findViewById(R.id.recyclerViewXML);
         timer();
-        onClick(container);
-        return view;
-    }
 
-    //Pindah Fragment
-    public boolean loadFragment(Fragment fragment){
-        FragmentManager fm = getChildFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-        if(fragment != null){
-            ft.replace(R.id.tampilPilihan, fragment).commit();
-            return true;
-        } return false;
-    }
+        //Menangkap Fragment Child
+        FragmentManager FM = getChildFragmentManager();
+        FM.beginTransaction().replace(R.id.tampilPilihan, new FragmentBarang()).commit();
 
-    //AKSI//
-    public void onClick(View v) {
-        FragmentManager FM = getFragmentManager();
-        FragmentTransaction FT = FM.beginTransaction();
-        FragmentBarang FB = new FragmentBarang();
-        FragmentBarang1 FB1 = new FragmentBarang1();
-        FragmentBarang2 FB2 = new FragmentBarang2();
-        FT.add(R.id.tampilPilihan, FB).addToBackStack(null).commit();
-        BottomNavigationView BikiniBottom = v.findViewById(R.id.pilihan);
+        BottomNavigationView BikiniBottom = view.findViewById(R.id.pilihan);
         BikiniBottom.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
                 switch (item.getItemId()){
-                    case R.id.all: FT.replace(R.id.tampilPilihan, FB).addToBackStack(null).commit();
-                    break;
+                    case R.id.all: FM.beginTransaction().replace(R.id.tampilPilihan, new FragmentBarang()).commit();
+                        return false;
 
-                    case R.id.Chairs: FT.replace(R.id.tampilPilihan, FB1).addToBackStack(null).commit();
-                    break;
+                    case R.id.Chairs: FM.beginTransaction().replace(R.id.tampilPilihan, new FragmentBarang1()).commit();
+                        return false;
 
-                    case R.id.Sofas:  FT.replace(R.id.tampilPilihan, FB2).addToBackStack(null).commit();
-                    break;
+                    case R.id.Sofas:  FM.beginTransaction().replace(R.id.tampilPilihan, new FragmentBarang2()).commit();
+                        return false;
                 }
                 return false;
             }
         });
+
+        return view;
+    }
+
+    public void onClick(View v) {
     }
 
     //AUTO SCROLL//
@@ -102,6 +82,6 @@ public class FragmentBeranda extends Fragment {
 
                 }
             }
-        }, 0, 3000);
+        }, 0, 5000);
     }
 }

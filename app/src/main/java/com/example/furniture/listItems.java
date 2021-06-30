@@ -16,4 +16,14 @@ public class listItems {
             R.drawable.sofa
     };
 
+    public static int[] Bg = new int[]{
+            R.drawable.button_rounded,
+            R.drawable.button_roundedsofa
+    };
+
+    public static int[] BGrl = new int[]{
+            R.color.gray,
+            R.color.bronze
+    };
+
 }
