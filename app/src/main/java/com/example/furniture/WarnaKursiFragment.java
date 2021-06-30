@@ -12,7 +12,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link com.example.chooseitem.WarnaKursiFragment#newInstance} factory method to
+ * Use the {@link WarnaKursiFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class WarnaKursiFragment extends Fragment implements
