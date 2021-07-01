@@ -20,14 +20,14 @@ public class WarnaKursiFragment extends Fragment implements View.OnClickListener
         btnCoklat.setOnClickListener(this);
 
         /**
-        WarnaKursiCoklat mWarnaKursiCoklat = new WarnaKursiCoklat();
-        FragmentManager mFragmentManager = getChildFragmentManager();
-        btnCoklat = (ImageButton)view.findViewById(R.id.btn_coklat);
-        btnCoklat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mFragmentManager.beginTransaction().replace(R.id.frame_container, mWarnaKursiCoklat).commit();
-            }
+         WarnaKursiCoklat mWarnaKursiCoklat = new WarnaKursiCoklat();
+         FragmentManager mFragmentManager = getChildFragmentManager();
+         btnCoklat = (ImageButton)view.findViewById(R.id.btn_coklat);
+         btnCoklat.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+        mFragmentManager.beginTransaction().replace(R.id.frame_container, mWarnaKursiCoklat).commit();
+        }
         });**/
         return view;
     }

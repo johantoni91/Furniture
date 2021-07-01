@@ -10,11 +10,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link WarnaKursiFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class WarnaKursiCoklat extends Fragment implements
         View.OnClickListener{
     private ImageButton btnIjo;

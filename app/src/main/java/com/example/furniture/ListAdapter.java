@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -41,11 +42,11 @@ public class ListAdapter extends RecyclerView.Adapter{
 
         public ListViewHolder(View itemView){
             super(itemView);
-            mItemText   = (TextView) itemView.findViewById(R.id.Tv_barang);
-            mDiscounts  = (TextView) itemView.findViewById(R.id.Tv_diskon);
-            mObjects    = (ImageView) itemView.findViewById(R.id.gambar);
-            FLdiskon    = (FrameLayout) itemView.findViewById(R.id.FLdiskon);
-            RL1         = (RelativeLayout) itemView.findViewById(R.id.RL1);
+            mItemText   = itemView.findViewById(R.id.Tv_barang);
+            mDiscounts  = itemView.findViewById(R.id.Tv_diskon);
+            mObjects    = itemView.findViewById(R.id.gambar);
+            FLdiskon    = itemView.findViewById(R.id.FLdiskon);
+            RL1         = itemView.findViewById(R.id.RL1);
             itemView.setOnClickListener(this);
         }
 
@@ -53,8 +54,8 @@ public class ListAdapter extends RecyclerView.Adapter{
             mItemText.setText(listItems.namaBarang[position]);
             mDiscounts.setText(listItems.jmlDiskon[position]);
             mObjects.setImageResource(listItems.image[position]);
-            FLdiskon.setBackgroundColor(listItems.Bg[position]);
-            FLdiskon.setBackgroundResource(listItems.BGrl[position]);
+            FLdiskon.setBackgroundResource(listItems.Bg[position]);
+            RL1.setBackgroundResource(listItems.BGrl[position]);
         }
 
         public void onClick(View view){

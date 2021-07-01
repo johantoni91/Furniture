@@ -1,5 +1,7 @@
 package com.example.furniture;
 
+import android.graphics.drawable.Drawable;
+
 public class listItems {
     public static String[] namaBarang = new String[]{
             "Hepburn Lounge Chair",

@@ -35,11 +35,10 @@ public class ChoseItem extends AppCompatActivity {
                 hasil = Integer.parseInt(String.valueOf(TVhasil.getText()));
                 if(hasil == 1){
                     BTkurang.setClickable(false);
-                    BTkurang.setActivated(false);
                 } else{
                     hasil--;
+                    TVhasil.setText(""+hasil);
                 }
-                TVhasil.setText(hasil);
             }
         });
 
@@ -48,7 +47,7 @@ public class ChoseItem extends AppCompatActivity {
             public void onClick(View v) {
                 hasil = Integer.parseInt(String.valueOf(TVhasil.getText()));
                 hasil++;
-                TVhasil.setText(hasil);
+                TVhasil.setText(""+hasil);
             }
         });
     }
